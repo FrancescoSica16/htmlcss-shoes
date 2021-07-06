@@ -5,20 +5,29 @@
 }
 
 header{
-    height: 10vh;
+   position:fixed;
+   z-index: 2;
+
 }
 
 img{
     height: 400px;
     width: 500px;
+}    
+
+.item-link a{
+    text-decoration: none;
 }
 
 .item-link li{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
     list-style-type: none;
-    display: inline;
+    display: inline-block;
     margin-right: 25px;
     border: 1px solid rgba(20, 19, 19, 0.705);
-    padding: 9px 15px 9px 15px ;
     vertical-align: baseline;
     border-radius: 25px;
     background-color: wheat;
@@ -27,23 +36,46 @@ img{
 
 .item-link{
     position: absolute;
+    position: fixed;
     right: 0;
     top: 35px;
 }
 
-.item-page{
-    height: 100vh;
-    width: 100vw;
+.item-caption{
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900 ;
+    font-size: larger;
+
+
 }
 
-.superga-page{
+.wrapper{
+    position: absolute;
+}
+
+.item-page{
+    height: 100vh;
+    position: relative;
+}
+
+#superga-page{
     background-color: red;
 }
 
-.tennis-page{
+#tennis-page{
     background-color: green;
 }
 
-.converse-page{
+#converse-page{
     background-color: yellow;
 }
+
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}  
